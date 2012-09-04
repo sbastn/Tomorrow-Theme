@@ -17,6 +17,7 @@ let s:yellow = "eab700"
 let s:green = "718c00"
 let s:blue = "4271ae"
 let s:purple = "8959a8"
+let s:whitesmoke = "f5f5f5"
 
 set background=light
 hi clear
@@ -232,12 +233,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
-	call <SID>X("LineNr", s:foreground, "", "")
+	call <SID>X("LineNr", s:foreground, s:whitesmoke, "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:yellow, "")
-	call <SID>X("StatusLine", s:foreground, s:background, "reverse")
-	call <SID>X("StatusLineNC", s:foreground, s:background, "reverse")
+	call <SID>X("StatusLine", s:whitesmoke, s:whitesmoke, "")
+	call <SID>X("StatusLineNC", s:whitesmoke, s:whitesmoke, "")
+	call <SID>X("VertSplit", s:whitesmoke, s:whitesmoke, "")
+	call <SID>X("TabLineFill", s:whitesmoke, s:whitesmoke, "")
 	call <SID>X("Visual", "", s:selection, "")
 	call <SID>X("Directory", s:blue, "", "")
 	call <SID>X("ModeMsg", s:green, "", "")
